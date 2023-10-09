@@ -1,10 +1,11 @@
 import "../styles/main.css";
-import { inter, lora, myFont } from "../styles/fonts";
 import Alert from "./components/Alert";
 import Navbar from "./components/Navbar";
-import InteractiveCircle from "./components/InteractiveCircle";
-import { ToastContainer } from "react-toastify";
+import { raleway } from "../styles/fonts";
+
 import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
+import Provider from "./context/Provider";
 
 export const metadata = {
   title: "Kisakye Moses | Uncle Moses",
@@ -13,13 +14,14 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang='en'>
-      <body className={`font-bold ${myFont.className}`}>
-        <ToastContainer position='top-center' />
-        {/* <InteractiveCircle /> */}
-        <Navbar />
-        <Alert />
-        {children}
+    <html lang='en' className='light' suppressHydrationWarning={true}>
+      <body className={`${raleway.className}`}>
+        <Provider>
+          <ToastContainer position='top-center' />
+          <Navbar />
+          <Alert />
+          {children}
+        </Provider>
       </body>
     </html>
   );

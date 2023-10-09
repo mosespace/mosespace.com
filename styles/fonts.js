@@ -1,5 +1,5 @@
-import { Inter, Lora, Raleway } from "next/font/google";
 import localFont from "next/font/local";
+import { Inter, Lora, Raleway } from "next/font/google";
 
 // defining the your variable fonts
 
@@ -28,4 +28,4 @@ const subfont = localFont({
   src: "../used-fonts/my-font.ttf",
 });
 
-export { inter, lora, myFont, subfont, stretchPro };
+export { inter, lora, myFont, subfont, stretchPro, raleway };
