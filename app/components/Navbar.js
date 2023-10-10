@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { BiGridAlt } from "react-icons/bi";
 import { RxCross2 } from "react-icons/rx";
 import ToggleBtn from "./ToggleBtn";
-import { BsDiscord, BsLinkedin } from "react-icons/bs";
+import { BsDiscord, BsLinkedin, BsGithub } from "react-icons/bs";
 import { RiTwitterXFill } from "react-icons/ri";
 import { stretchPro } from "../../styles/fonts";
 
@@ -80,6 +80,9 @@ export default function Navbar() {
               target='blank'
             >
               <BsLinkedin size={25} />
+            </Link>
+            <Link href='https://github.com/mosespace' target='blank'>
+              <BsGithub size={25} />
             </Link>
             <Link href='https://discord.gg/5WMr7rz6' target='blank'>
               <BsDiscord size={25} />
