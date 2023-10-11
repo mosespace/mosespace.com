@@ -1,12 +1,12 @@
 import React from "react";
+import { NextResponse } from "next/server";
 import PageWrapper from "../components/page-wrapper";
 import Projects from "@/app/components/my-projects/Projects";
-import { NextResponse } from "next/server";
 
 export default async function page() {
   try {
     const projectsResponse = await fetch(process.env.PROJECTS_API);
-    const projectsData = await projectsResponse.json();
+    const projectsData = await projectsResponse.json(projectsResponse);
 
     return projectsData;
     // console.log(projectsData);
