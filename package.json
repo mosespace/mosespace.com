@@ -9,9 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.11.0",
+    "@react-email/render": "^0.0.7",
     "framer-motion": "^10.16.4",
     "next": "latest",
     "next-themes": "^0.2.1",
+    "nodemailer": "^6.9.6",
     "react": "latest",
     "react-dom": "latest",
     "react-hook-form": "^7.47.0",
