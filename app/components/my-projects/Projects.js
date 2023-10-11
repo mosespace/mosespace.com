@@ -1,8 +1,8 @@
 "use client";
-import { stretchPro, subfont } from "../../../styles/fonts";
 import Link from "next/link";
-import React, { useState } from "react";
 import Image from "next/image";
+import React, { useState } from "react";
+import { stretchPro, subfont } from "../../../styles/fonts";
 
 export default function Projects({ data }) {
   const [currentProject, setCurrentProject] = useState(null);
@@ -64,7 +64,7 @@ export default function Projects({ data }) {
                   >
                     {project.project_title}
                     <h3 className='font-bold text-[.9rem]'>
-                      {project.project_short_desc}
+                      {project.project_short_des}
                     </h3>
                   </Link>
                 </div>
