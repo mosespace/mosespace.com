@@ -3,19 +3,12 @@ import Link from "next/link";
 import Image from "next/image";
 import { FaLink, FaGithub } from "react-icons/fa";
 import { stretchPro, raleway } from "../../../styles/fonts";
+import { NextResponse } from "next/server";
 
 export default async function Page({ params: { slug } }) {
-  try {
-    const projects = await fetch(process.env.PROJECTS_API);
-    const projectsData = await projects.json();
-    // console.log(projectsData)
-    const project = projectsData?.find((project) => project.slug == slug);
-    // console.log(project);
-  } catch (error) {
-    console.error("Error parsing JSON:", error);
-    const emptyArray = [];
-    return emptyArray;
-  }
+  const projects = await fetch(process.env.PROJECTS_API);
+  const projectsData = await projects.json();
+  const project = projectsData?.find((project) => project.slug == slug);
 
   return (
     <section className='px-[2rem] bg-white dark:bg-black lg:px-[20rem] w-full flex flex-col min-h-screen'>
