@@ -1,100 +1,16 @@
 "use client";
-import { stretchPro, subfont } from "../../../styles/fonts";
 import Link from "next/link";
-import React, { useState } from "react";
 import Image from "next/image";
-import proj1 from "../../../public/project_images/proj1.jpg";
-import proj2 from "../../../public/project_images/proj2.jpg";
-import proj3 from "../../../public/project_images/proj3.jpg";
-import proj4 from "../../../public/project_images/proj4.png";
-import proj5 from "../../../public/project_images/proj5.jpg";
-import proj6 from "../../../public/project_images/proj6.png";
-import proj7 from "../../../public/project_images/proj7.jpg";
-import proj8 from "../../../public/project_images/proj8.jpg";
-import proj9 from "../../../public/project_images/proj9.jpg";
-import proj10 from "../../../public/project_images/proj10.webp";
+import React, { useState } from "react";
+import { stretchPro, subfont } from "../../../styles/fonts";
 
-export default function Projects() {
+export default function Projects({ data }) {
   const [currentProject, setCurrentProject] = useState(null);
-  // console.log(currentProject);
-
-  const projects = [
-    {
-      id: "001",
-      project_title: "Portfolio",
-      project_short_desc: "Landing (WEB)",
-      project_image: proj1,
-      project_link: "/detailed-page",
-    },
-    {
-      id: "002",
-      project_title: "Nile Post Clone",
-      project_short_desc: "Fullstack App",
-      project_image: proj2,
-      project_link: "/detailed-page",
-    },
-    {
-      id: "003",
-      project_title: "Agape Vet",
-      project_short_desc: "Landing (WEB)",
-      project_image: proj3,
-      project_link: "/detailed-page",
-    },
-    {
-      id: "004",
-      project_title: "UNEB Clone",
-      project_short_desc: "Landing (WEB)",
-      project_image: proj4,
-      project_link: "/detailed-page",
-    },
-    {
-      id: "005",
-      project_title: "Mihasoft",
-      project_short_desc: "Social Media Design",
-      project_image: proj5,
-      project_link: "/detailed-page",
-    },
-    {
-      id: "006",
-      project_title: "E and D Website",
-      project_short_desc: "Fullstack App",
-      project_image: proj6,
-      project_link: "/detailed-page",
-    },
-    {
-      id: "007",
-      project_title: "Phaneroo Clone",
-      project_short_desc: "Landing (WEB)",
-      project_image: proj7,
-      project_link: "/detailed-page",
-    },
-    {
-      id: "008",
-      project_title: "Quiz App",
-      project_short_desc: "Game Application",
-      project_image: proj8,
-      project_link: "/detailed-page",
-    },
-    {
-      id: "009",
-      project_title: "BrandRider",
-      project_short_desc: "Fullstack App",
-      project_image: proj9,
-      project_link: "/detailed-page",
-    },
-    {
-      id: "0010",
-      project_title: "Project 10",
-      project_short_desc: "Graphics Design",
-      project_image: proj10,
-      project_link: "/detailed-page",
-    },
-  ];
 
   return (
     <div className='px-[2rem] md:px-0 flex flex-col lg:flex-row md:justify-between w-full md:w-full'>
       <div className='hidden lg:block relative w-[850px] h-[650px]'>
-        {projects.map((project) => (
+        {data.map((project) => (
           <div
             key={`${project.id}-image`}
             className={`absolute top-0 left-0 w-[850px] h-[650px]`}
@@ -124,13 +40,13 @@ export default function Projects() {
             Proojects <span></span>
           </h2>
           <button className='bg-orange-500 md:w-auto px-[2.3rem] cursor-not-allowed'>
-            {projects.length}
+            {data.length}
           </button>
         </div>
 
         <ul className='flex flex-col justify-between text-2xl lg:gap-4 py-[1rem] lg:overflow-y-auto lg:hover:overflow-scroll lg:no-scrollbar pt-[.8rem] lg:pt-[.8rem]'>
           <div className='pt-[.5rem] md:pt-[1.5rem]'>
-            {projects.map((project, id) => {
+            {data.map((project, id) => {
               return (
                 <div
                   className={`${
@@ -141,14 +57,14 @@ export default function Projects() {
                 >
                   <Link
                     key={id}
-                    href={project.project_link}
+                    href={`/my-projects/${project.slug}`}
                     className={`flex lg:flex-row justify-between font-extrabold text-[1.2rem] ${subfont.className} lg:text-2xl`}
                     onMouseEnter={() => setCurrentProject(project.id)}
                     onMouseLeave={() => setCurrentProject(null)}
                   >
                     {project.project_title}
                     <h3 className='font-bold text-[.9rem]'>
-                      {project.project_short_desc}
+                      {project.project_short_des}
                     </h3>
                   </Link>
                 </div>

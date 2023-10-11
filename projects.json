@@ -1,0 +1,93 @@
+[
+  {
+    "id": "001",
+    "slug": "portfolio",
+    "project_year": "2023",
+    "project_title": "Portfolio",
+    "project_link": "/detailed-page",
+    "project_short_des": "Landing (WEB)",
+    "project_image": "/project_images/proj1.jpg",
+    "project_category": "Development, Design Ux/UI"
+  },
+  {
+    "id": "002",
+    "project_title": "Nile Post Clone",
+    "project_short_des": "Fullstack App",
+    "slug": "nile-post-clone",
+    "project_image": "/project_images/proj2.jpg",
+    "project_link": "/detailed-page",
+    "project_category": "Development, Design Ux/UI"
+  },
+  {
+    "id": "003",
+    "project_title": "Agape Vet",
+    "project_short_des": "Landing (WEB)",
+    "slug": "agape-vet",
+    "project_image": "/project_images/proj3.jpg",
+    "project_link": "/detailed-page",
+    "project_category": "Development, Design Ux/UI"
+  },
+  {
+    "id": "004",
+    "project_title": "UNEB Clone",
+    "project_short_des": "Landing (WEB)",
+    "slug": "uneb-clone",
+    "project_image": "/project_images/proj4.png",
+    "project_link": "/detailed-page",
+    "project_category": "Development, Design Ux/UI"
+  },
+  {
+    "id": "005",
+    "project_title": "Mihasoft",
+    "project_short_des": "Social Media Design",
+    "slug": "mihasoft-project",
+    "project_image": "/project_images/proj5.jpg",
+    "project_link": "/detailed-page",
+    "project_category": "Development, Design Ux/UI"
+  },
+  {
+    "id": "006",
+    "project_title": "E and D Website",
+    "project_short_des": "Fullstack App",
+    "slug": "e-and-d-website",
+    "project_image": "/project_images/proj6.png",
+    "project_link": "/detailed-page",
+    "project_category": "Development, Design Ux/UI"
+  },
+  {
+    "id": "007",
+    "project_title": "Phaneroo Clone",
+    "project_short_des": "Landing (WEB)",
+    "slug": "phaneroo-clone",
+    "project_image": "/project_images/proj7.jpg",
+    "project_link": "/detailed-page",
+    "project_category": "Development, Design Ux/UI"
+  },
+  {
+    "id": "008",
+    "project_title": "Quiz App",
+    "project_short_des": "Game Application",
+    "slug": "quiz-app",
+    "project_image": "/project_images/proj8.jpg",
+    "project_link": "/detailed-page",
+    "project_category": "Development, Design Ux/UI"
+  },
+  {
+    "id": "009",
+    "project_title": "BrandRider",
+    "project_short_des": "Fullstack App",
+    "slug": "brandrider-project",
+    "project_image": "/project_images/proj9.jpg",
+    "project_link": "/detailed-page",
+    "project_category": "Development, Design Ux/UI"
+  },
+  {
+    "id": "0010",
+    "project_title": "Project 10",
+    "project_short_des": "Graphics Design",
+    "slug": "project-10",
+    "project_image": "/project_images/proj10.jpg",
+    "project_link": "/detailed-page",
+    "project_category": "Development, Design Ux/UI"
+  }
+]
