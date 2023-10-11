@@ -1,11 +1,10 @@
 import React from "react";
-
-import Projects from "@/app/components/my-projects/Projects";
 import PageWrapper from "../components/page-wrapper";
+import Projects from "@/app/components/my-projects/Projects";
 
 export default async function page() {
-  const projectsResponse = await fetch(process.env.FETCH_URL);
   const projectsData = await projectsResponse.json();
+  const projectsResponse = await fetch(process.env.PROJECTS_API);
   // console.log(projectsData);
 
   return (
@@ -16,4 +15,3 @@ export default async function page() {
     </PageWrapper>
   );
 }
-// bg-[#f7f7f7]
