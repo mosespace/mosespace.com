@@ -7,6 +7,8 @@ export default async function page() {
   try {
     const projectsResponse = await fetch(process.env.PROJECTS_API);
     const projectsData = await projectsResponse.json();
+
+    return projectsData;
     // console.log(projectsData);
   } catch (error) {
     console.error("Error in getting projects:", error);
