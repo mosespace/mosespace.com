@@ -5,11 +5,16 @@ import { FaLink, FaGithub } from "react-icons/fa";
 import { stretchPro, raleway } from "../../../styles/fonts";
 
 export default async function Page({ params: { slug } }) {
-  const projects = await fetch(process.env.PROJECTS_API);
-  const projectsData = await projects.json();
-  // console.log(projectsData)
-  const project = projectsData?.find((project) => project.slug == slug);
-  // console.log(project);
+  try {
+    const projects = await fetch(process.env.PROJECTS_API);
+    const projectsData = await projects.json();
+    // console.log(projectsData)
+    const project = projectsData?.find((project) => project.slug == slug);
+    // console.log(project);
+  } catch (error) {
+    console.error("Error parsing JSON:", error);
+    return NextResponse.error([]);
+  }
 
   return (
     <section className='px-[2rem] bg-white dark:bg-black lg:px-[20rem] w-full flex flex-col min-h-screen'>

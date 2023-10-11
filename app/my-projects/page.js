@@ -3,9 +3,14 @@ import PageWrapper from "../components/page-wrapper";
 import Projects from "@/app/components/my-projects/Projects";
 
 export default async function page() {
-  const projectsResponse = await fetch(process.env.PROJECTS_API);
-  const projectsData = await projectsResponse.json(projectsResponse);
-  // console.log(projectsData);
+  try {
+    const projectsResponse = await fetch(process.env.PROJECTS_API);
+    const projectsData = await projectsResponse.json(projectsResponse);
+    // console.log(projectsData);
+  } catch (error) {
+    console.error("Error parsing JSON:", error);
+    return NextResponse.error([]);
+  }
 
   return (
     <PageWrapper>
