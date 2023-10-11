@@ -7,6 +7,7 @@ import { stretchPro, raleway } from "../../../styles/fonts";
 export default async function Page({ params: { slug } }) {
   const projects = await fetch(process.env.PROJECTS_API);
   const projectsData = await projects.json();
+  // console.log(projectsData)
   const project = projectsData?.find((project) => project.slug == slug);
   // console.log(project);
 
