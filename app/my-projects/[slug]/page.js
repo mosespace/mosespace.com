@@ -3,6 +3,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { FaLink, FaGithub } from "react-icons/fa";
 import { stretchPro, raleway } from "../../../styles/fonts";
+import { NextResponse } from "next/server";
+import { toast } from "react-toastify";
 
 export default async function Page({ params: { slug } }) {
   try {
@@ -12,9 +14,9 @@ export default async function Page({ params: { slug } }) {
     const project = projectsData?.find((project) => project.slug == slug);
     // console.log(project);
   } catch (error) {
-    console.error("Error parsing JSON:", error);
-    const emptyArray = [];
-    return emptyArray;
+    toast.error("projects didn't load correctly");
+    console.error("Error in getting projects:", error);
+    return NextResponse.error("Internal Server Error", 500);
   }
 
   return (

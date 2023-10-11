@@ -1,6 +1,8 @@
 import React from "react";
 import PageWrapper from "../components/page-wrapper";
 import Projects from "@/app/components/my-projects/Projects";
+import { NextResponse } from "next/server";
+import { toast } from "react-toastify";
 
 export default async function page() {
   try {
@@ -8,9 +10,9 @@ export default async function page() {
     const projectsData = await projectsResponse.json(projectsResponse);
     // console.log(projectsData);
   } catch (error) {
-    console.error("Error parsing JSON:", error);
-    const emptyArray = [];
-    return emptyArray;
+    toast.error("projects didn't load correctly");
+    console.error("Error in getting projects:", error);
+    return NextResponse.error("Internal Server Error", 500);
   }
 
   return (
