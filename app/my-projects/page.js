@@ -6,7 +6,7 @@ import { NextResponse } from "next/server";
 export default async function page() {
   try {
     const projectsResponse = await fetch(process.env.PROJECTS_API);
-    const projectsData = await projectsResponse.json(projectsResponse);
+    const projectsData = await projectsResponse.json();
     // console.log(projectsData);
   } catch (error) {
     console.error("Error in getting projects:", error);
