@@ -3,8 +3,8 @@ import PageWrapper from "../components/page-wrapper";
 import Projects from "@/app/components/my-projects/Projects";
 
 export default async function page() {
-  const projectsData = await projectsResponse.json();
   const projectsResponse = await fetch(process.env.PROJECTS_API);
+  const projectsData = await projectsResponse.json();
   // console.log(projectsData);
 
   return (
