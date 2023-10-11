@@ -3,7 +3,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { FaLink, FaGithub } from "react-icons/fa";
 import { stretchPro, raleway } from "../../../styles/fonts";
-import { NextResponse } from "next/server";
 
 export default async function Page({ params: { slug } }) {
   const projects = await fetch(process.env.PROJECTS_API);
