@@ -40,7 +40,7 @@
     "id": "005",
     "project_title": "Mihasoft",
     "project_short_des": "Social Media Design",
-    "slug": "ihasoft-project",
+    "slug": "mihasoft-project",
     "project_image": "/project_images/proj5.jpg",
     "project_link": "/detailed-page",
     "project_category": "Development, Design Ux/UI"
@@ -49,7 +49,7 @@
     "id": "006",
     "project_title": "E and D Website",
     "project_short_des": "Fullstack App",
-    "slug": "w-and-d-website",
+    "slug": "e-and-d-website",
     "project_image": "/project_images/proj6.png",
     "project_link": "/detailed-page",
     "project_category": "Development, Design Ux/UI"
