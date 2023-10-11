@@ -9,7 +9,8 @@ export default async function page() {
     // console.log(projectsData);
   } catch (error) {
     console.error("Error parsing JSON:", error);
-    return NextResponse.error([]);
+    const emptyArray = [];
+    return emptyArray;
   }
 
   return (

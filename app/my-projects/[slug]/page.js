@@ -13,7 +13,8 @@ export default async function Page({ params: { slug } }) {
     // console.log(project);
   } catch (error) {
     console.error("Error parsing JSON:", error);
-    return NextResponse.error([]);
+    const emptyArray = [];
+    return emptyArray;
   }
 
   return (
