@@ -12,6 +12,7 @@ export default async function Page({ params: { slug } }) {
     // console.log(projectsData)
     const project = projectsData?.find((project) => project.slug == slug);
     // console.log(project);
+    return project;
   } catch (error) {
     console.error("Error in getting projects:", error);
     return NextResponse.error("Internal Server Error", 500);
