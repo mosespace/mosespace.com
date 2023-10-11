@@ -1,25 +1,17 @@
-"use client";
-
-import React, { useEffect } from "react";
+import React from "react";
 import PageWrapper from "../components/page-wrapper";
 import Projects from "@/app/components/my-projects/Projects";
 import { NextResponse } from "next/server";
-import { toast } from "react-toastify";
 
 export default async function page() {
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const projectsResponse = await fetch(process.env.PROJECTS_API);
-        const data = await projectsResponse.json();
-        setProjectsData(data);
-      } catch (error) {
-        console.error("Error in getting projects:", error);
-      }
-    };
-
-    fetchData();
-  }, []);
+  try {
+    const projectsResponse = await fetch(process.env.PROJECTS_API);
+    const projectsData = await projectsResponse.json(projectsResponse);
+    // console.log(projectsData);
+  } catch (error) {
+    console.error("Error in getting projects:", error);
+    return NextResponse.error("Internal Server Error", 500);
+  }
 
   return (
     <PageWrapper>
