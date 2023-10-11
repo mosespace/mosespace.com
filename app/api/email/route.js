@@ -6,7 +6,7 @@ export async function POST(request) {
     const { subject, email, message } = await request.json();
 
     const data = { subject, email, message };
-    console.log(data);
+    // console.log(data);
 
     await sendMail(subject, email, message);
 
