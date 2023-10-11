@@ -1,30 +1,21 @@
-"use client";
-import React, { useEffect } from "react";
+import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { FaLink, FaGithub } from "react-icons/fa";
 import { stretchPro, raleway } from "../../../styles/fonts";
 import { NextResponse } from "next/server";
-import { toast } from "react-toastify";
 
 export default async function Page({ params: { slug } }) {
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const projects = await fetch(process.env.PROJECTS_API);
-        const projectsData = await projects.json();
-        // console.log(projectsData)
-        const project = projectsData?.find((project) => project.slug == slug);
-        // console.log(project);
-      } catch (error) {
-        toast.error("projects didn't load correctly");
-        console.error("Error in getting projects:", error);
-        return NextResponse.error("Internal Server Error", 500);
-      }
-    };
-
-    fetchData();
-  }, []);
+  try {
+    const projects = await fetch(process.env.PROJECTS_API);
+    const projectsData = await projects.json();
+    // console.log(projectsData)
+    const project = projectsData?.find((project) => project.slug == slug);
+    // console.log(project);
+  } catch (error) {
+    console.error("Error in getting projects:", error);
+    return NextResponse.error("Internal Server Error", 500);
+  }
 
   return (
     <section className='px-[2rem] bg-white dark:bg-black lg:px-[20rem] w-full flex flex-col min-h-screen'>
