@@ -6,17 +6,9 @@ import { stretchPro, raleway } from "../../../styles/fonts";
 import { NextResponse } from "next/server";
 
 export default async function Page({ params: { slug } }) {
-  try {
-    const projects = await fetch(process.env.PROJECTS_API);
-    const projectsData = await projects.json();
-    // console.log(projectsData)
-    const project = projectsData?.find((project) => project.slug == slug);
-    // console.log(project);
-    return project;
-  } catch (error) {
-    console.error("Error in getting projects:", error);
-    return NextResponse.error("Internal Server Error", 500);
-  }
+  const projects = await fetch(process.env.PROJECTS_API);
+  const projectsData = await projects.json();
+  const project = projectsData?.find((project) => project.slug == slug);
 
   return (
     <section className='px-[2rem] bg-white dark:bg-black lg:px-[20rem] w-full flex flex-col min-h-screen'>
