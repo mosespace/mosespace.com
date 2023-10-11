@@ -1,18 +1,18 @@
 import React from "react";
 import Link from "next/link";
-import { stretchPro, raleway } from "../../../styles/fonts";
-import { FaLink, FaGithub } from "react-icons/fa";
-// import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
+import { FaLink, FaGithub } from "react-icons/fa";
+import { stretchPro, raleway } from "../../../styles/fonts";
 
 export default async function Page({ params: { slug } }) {
-  const projects = await fetch(process.env.FETCH_URL);
+  const projects = await fetch(process.env.PROJECTS_API);
   const projectsData = await projects.json();
   const project = projectsData?.find((project) => project.slug == slug);
   // console.log(project);
 
   return (
-    <section className='px-[2rem] lg:px-[20rem] w-full flex flex-col min-h-screen'>
+    <section className='px-[2rem] bg-white dark:bg-black lg:px-[20rem] w-full flex flex-col min-h-screen'>
+      {/* Project Full Thumbnail Desktop */}
       <div className='hidden lg:block relative h-[400px] w-full mb-6'>
         <Image
           fill
@@ -23,11 +23,13 @@ export default async function Page({ params: { slug } }) {
       <div>
         {/* Project Intro */}
         <h2
-          className={`uppercase text-red-700 dark:text-orange-500 font-bold text-3xl ${stretchPro.className} border-b-2 pb-3 border-slate-500`}
+          className={`uppercase text-red-700 dark:text-orange-500 font-bold text-3xl ${stretchPro.className} border-b-2 mt-[6rem] lg:mt-0 pb-3 border-slate-500`}
         >
           {project.project_title}
         </h2>
       </div>
+
+      {/* Project Full Details */}
       <div>
         <div className='flex justify-between py-3'>
           <span className={`uppercase font-light ${stretchPro.className}`}>
@@ -61,6 +63,7 @@ export default async function Page({ params: { slug } }) {
           </h3>
         </div>
       </div>
+
       {/* Project Description and Links */}
       <div className='py-[1rem] flex flex-col gap-[1rem] lg:gap-[2.2rem]'>
         <p className='break-all whitespace-pre-line'>
@@ -71,6 +74,8 @@ export default async function Page({ params: { slug } }) {
           (website, wallpapers, social medias) and physical formats (business
           cards/stickers, letter paper and resume).
         </p>
+
+        {/*Preview Buttons*/}
         <div className='flex justify-between'>
           <Link
             href='/live-preview'
@@ -90,6 +95,7 @@ export default async function Page({ params: { slug } }) {
           </Link>
         </div>
       </div>
+
       {/* Project Images */}
       <div className='border-b-2 border-slate-600 pb-[1rem] pt-[2.2rem]'>
         <h2 className={`text-center py-2 ${stretchPro.className}`}>
@@ -102,6 +108,8 @@ export default async function Page({ params: { slug } }) {
           <div className='box-shadow h-[200px] lg:h-[400px] bg-[#ffe54c]'></div>
         </div>
       </div>
+
+      {/*Last Buttons*/}
       <div className='py-[1rem] flex justify-between'>
         <Link href='' className={`${stretchPro.className}`}>
           next project
