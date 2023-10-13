@@ -7,7 +7,7 @@ export default async function page() {
   const projectsData = await response.json();
   return (
     <PageWrapper>
-      <main className='flex bg-white dark:bg-black lg:pr-[10rem] lg:pt-[16rem] pt-[8rem]  min-h-full lg:h-screen lg:overflow-hidden'>
+      <main className='flex bg-white dark:bg-slate-950 lg:pr-[10rem] lg:pt-[16rem] pt-[8rem]  min-h-full lg:h-screen lg:overflow-hidden'>
         <Projects data={projectsData} />
       </main>
     </PageWrapper>
