@@ -1,37 +1,54 @@
+"use client";
 import Link from "next/link";
+import { stretchPro2, stretchPro3 } from "../../styles/fonts";
 import { BsArrowRight } from "react-icons/bs";
+import { useTheme } from "next-themes";
 
 export default function Hero() {
+  const { theme, setTheme } = useTheme();
+
   return (
-    <main className='bg-white dark:bg-black  flex flex-col justify-center items-center min-h-screen w-full h-screen lg:overflow-hidden'>
-      <div className='flex flex-col justify-center items-center  text-[5rem] pt-[2rem] lg:pt-0 lg:text-center px-[2rem]'>
-        <h1 className='text-black dark:text-white lg:text-[3rem] text-[2rem] font-extrabold text-center uppercase'>
-          <span className='font-bold md:dark:text-blue-700 md:text-stroke-3'>
+    <main
+      className={` ${
+        theme === "light"
+          ? "bg-[url(/bg3.jpg)] lg:pt-[10rem] bg-cover bg-center flex flex-col justify-center items-center min-h-screen w-full h-screen lg:overflow-hidden"
+          : "bg-slate-950 lg:pt-[10rem] bg-cover bg-center flex flex-col justify-center items-center min-h-screen w-full h-screen lg:overflow-hidden"
+      }`}
+    >
+      <div className='flex flex-col justify-center items-center pt-[2rem] lg:pt-0 lg:text-center px-[2rem] sm:max-w-[75%] lg:max-w-[75%]'>
+        <h1
+          className={`${stretchPro2.className} leading-[1.1] text-black dark:text-white lg:text-[5rem] text-[2rem] text-center uppercase`}
+        >
+          <span className='md:dark:text-blue-700 md:text-stroke-3'>
             HEY, I'M{" "}
           </span>
-          KISAKYE MOSES <br />{" "}
-          <span className='font-bold dark:md:text-blue-700 md:text-stroke-3'>
+          KISAKYE MOSES{" "}
+          <span className='dark:md:text-blue-700 md:text-stroke-3'>
             BUT YOU CAN CALL ME{" "}
           </span>
           UNCLE MOSES
         </h1>
-        <div className='mt-4 mb-4 text-[1rem] align-center lg:text-[1.5rem] text-black dark:text-white lg:font-extrabold font-medium'>
+        <div
+          className={`${stretchPro3.className} mt-4 mb-4 text-[1rem] text-center align-center lg:text-[1.5rem] text-black dark:text-white`}
+        >
           <p>
-            I am a front-end and back-end web developer <br />& a graphic
-            designer, UX/UI designer
+            I am a front-end and back-end web developer & a graphic designer,
+            UX/UI designer
           </p>
         </div>
-        <div className='lg:flex lg:flex-row w-full flex flex-col justify-center items-center gap-[1rem] lg:items-center lg:justify-center lg:gap-[2rem] text-xl font-medium lg:font-semibold'>
+        <div
+          className={`${stretchPro3.className} lg:flex lg:flex-row w-full flex flex-col justify-center items-center gap-[1rem] lg:items-center lg:justify-center lg:gap-[2rem] text-xl sm:flex sm:flex-row`}
+        >
           <Link
             href='my-projects'
-            className='flex items-center gap-2 hover:border-b-[2px] border-white dark:border-black hover:ease-in-out hover:transition-all hover:focus dark:text-white text-black'
+            className='flex bg-amber-500 px-4 py-3 items-center gap-2 dark:border-black dark:text-white'
           >
             <BsArrowRight />
             see my projects
           </Link>
           <Link
             href='about-me'
-            className='flex items-center gap-2 hover:border-b-[2px] border-white dark:border-black  hover:ease-in-out hover:transition-all hover:focus dark:text-white text-black'
+            className='flex bg-amber-500 px-4 py-3 items-center gap-2 dark:border-black  dark:text-white'
           >
             <BsArrowRight />
             about me
