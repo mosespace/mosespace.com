@@ -5,6 +5,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import "react-toastify/dist/ReactToastify.css";
 import { stretchPro, raleway } from "../../styles/fonts";
+import { toast } from "react-toastify";
 
 export default function Contact() {
   const {
@@ -18,22 +19,22 @@ export default function Contact() {
   const [loading, setLoading] = useState(false);
 
   const onSubmit = async (data) => {
-    console.log(data);
+    // console.log(data);
 
     try {
       setLoading(true);
 
-      const response = await fetch(process.env.EMAIL_API, {
+      const response = await fetch(process.env.NEXT_PUBLIC_EMAIL_API, {
         method: "POST",
         headers: {
-          Accept: "application/json, text/plain, */*",
+          // Accept: "application/json",
           "Content-Type": "application/json",
         },
         body: JSON.stringify(data),
       });
 
       if (response.ok) {
-        reset;
+        reset();
         toast.success("Your email has been sent successfully");
         setLoading(false);
         // console.log(response);
@@ -49,11 +50,10 @@ export default function Contact() {
   return (
     <>
       <section
-        className={`${raleway.className} lg:mx-[35rem] px-[2rem] lg:mt-[5rem]`}
+        className={`${raleway.className} lg:mx-[35rem] px-[2rem] lg:mt-[10rem]`}
       >
         {/*Contact Form and Footer Section Together*/}
         <>
-          {/* lg:py-16 */}
           <h2
             className={`${stretchPro.className} mb-4 text-4xl tracking-tight text-center text-gray-900 dark:text-white`}
           >
@@ -171,8 +171,8 @@ export default function Contact() {
           </form>
 
           {/*Down Footer */}
-          <div class='mt-[2rem] px-4 py-6 bg-blue-700 md:flex text-center md:items-center md:justify-between'>
-            <span class='text-sm text-gray-500 dark:text-gray-300 sm:text-center'>
+          <div class='mt-[2rem] px-4 py-6 md:flex text-center md:items-center md:justify-between'>
+            <span class='text-sm text-gray-900 lg:text-gray-50 dark:text-gray-300 sm:text-center'>
               © 2023{" "}
               <Link href='https://flowbite.com/'>
                 Made with 💚 by Kisakye Moses™
