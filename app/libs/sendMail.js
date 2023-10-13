@@ -11,7 +11,7 @@ export async function sendMail(subject, email, message) {
 
   var mailOptions = {
     from: email,
-    to: process.env.NODEMAILER_EMAIL,
+    to: process.env.NEXT_PUBLIC_NODEMAILER_EMAIL,
     subject: subject,
     text: message,
   };
@@ -20,7 +20,7 @@ export async function sendMail(subject, email, message) {
     if (error) {
       throw new Error(error);
     } else {
-      console.log("Your Email Sent");
+      // console.log("Your Email Sent");
       return true;
     }
   });
