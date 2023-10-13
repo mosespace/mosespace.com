@@ -17,6 +17,10 @@
   }
 }
 
+.bgBlack {
+  background-color: #000;
+}
+
 @keyframes bg-color {
   0% {
     background-color: #3ce7c5;
@@ -171,4 +175,13 @@
     rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
   box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
     rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+}
+
+.bg {
+  height: 100vh;
+  width: 100vw;
+  background-image: url(/public/bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  backface-visibility: visible;
 }
