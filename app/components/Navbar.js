@@ -24,25 +24,25 @@ export default function Navbar() {
   return (
     <div>
       {/*Desktop Primary Nav Bar */}
-      <nav className='flex flex-col justify-between  lg:bg-transparent py-[1rem] lg:px-[10rem] lg:pt-[8rem] lg:text-3xl text-2xl font-bold absolute left-0 right-0 text-slate-950 dark:text-white'>
+      <nav className='flex flex-col justify-between  lg:bg-transparent py-[1rem] lg:px-[10rem] lg:pt-[8rem] lg:text-3xl text-2xl font-bold absolute left-0 right-0 text-gray-900 dark:text-white'>
         <div className='flex justify-between items-center px-[2rem]'>
           <div className={`${stretchPro.className}`}>
             <Link href='/'>
               <h2>
-                <span className='font-extrabold text-slate-950 dark:text-white'>
+                <span className='font-extrabold text-gray-900 dark:text-white'>
                   MMo.
                 </span>
               </h2>
             </Link>
           </div>
           <div className='flex gap-[1rem] items-center justify-center text-xl'>
-            <Link href='/eng' className='text-white'>
+            <Link href='/eng' className='text-black dark:text-white'>
               In
             </Link>
             <ToggleBtn />
             <button
               onClick={handleNavBar}
-              className='text-slate-950 dark:text-white'
+              className='text-gray-900 dark:text-white'
             >
               {showNavbar ? <RxCross2 /> : <BiGridAlt size={27} />}
             </button>
@@ -103,35 +103,35 @@ export default function Navbar() {
             <Link
               href='https://www.linkedin.com/in/kisakye-moses/'
               target='blank'
-              className='text-orange-400 hover:text-gray-900 dark:hover:text-white'
+              className='text-slate-50 hover:text-gray-900 dark:hover:text-white'
             >
               <BsLinkedin size={22} />
             </Link>
             <Link
               href='https://github.com/mosespace'
               target='blank'
-              className='text-orange-400 hover:text-gray-900 dark:hover:text-white'
+              className='text-slate-50 hover:text-gray-900 dark:hover:text-white'
             >
               <BsGithub size={25} />
             </Link>
             <Link
               href='https://discord.gg/5WMr7rz6'
               target='blank'
-              className='text-orange-400 hover:text-gray-900 dark:hover:text-white'
+              className='text-slate-50 hover:text-gray-900 dark:hover:text-white'
             >
               <BsDiscord size={25} />
             </Link>
             <Link
               href='https://www.twitter.com/bantu_creative'
               target='blank'
-              className='text-orange-400 hover:text-gray-900 dark:hover:text-white'
+              className='text-slate-50 hover:text-gray-900 dark:hover:text-white'
             >
               <RiTwitterXFill size={25} />
             </Link>
             <Link
               href='https://www.medium.com/mmosespace'
               target='blank'
-              className='text-orange-400 hover:text-gray-900 dark:hover:text-white'
+              className='text-slate-50 hover:text-gray-900 dark:hover:text-white'
             >
               <BsMedium size={25} />
             </Link>

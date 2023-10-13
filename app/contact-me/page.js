@@ -6,7 +6,7 @@ import PageWrapper from "../components/page-wrapper";
 export default function page() {
   return (
     <PageWrapper>
-      <div className='flex bg-white dark:bg-black lg:pt-0 justify-center dark:text-white pt-[6rem] min-h-screen lg:h-full lg:overflow-hidden'>
+      <div className='flex bg-white dark:bg-slate-950 lg:pt-0 justify-center dark:text-white pt-[6rem] min-h-screen lg:h-full lg:overflow-hidden'>
         <Contact />
       </div>
     </PageWrapper>

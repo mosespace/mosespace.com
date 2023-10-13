@@ -23,9 +23,19 @@ const stretchPro = localFont({
   weight: "900",
   style: "bold",
 });
+const stretchPro2 = localFont({
+  src: "../used-fonts/Trap-ExtraBold.otf",
+  weight: "900",
+  style: "bold",
+});
+const stretchPro3 = localFont({
+  src: "../used-fonts/Trap-Bold.otf",
+  weight: "900",
+  style: "bold",
+});
 
 const subfont = localFont({
   src: "../used-fonts/my-font.ttf",
 });
 
-export { inter, lora, myFont, subfont, stretchPro, raleway };
+export { inter, lora, myFont, subfont, stretchPro, stretchPro2, stretchPro3, raleway };

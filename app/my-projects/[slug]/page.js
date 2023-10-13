@@ -3,15 +3,14 @@ import Link from "next/link";
 import Image from "next/image";
 import { FaLink, FaGithub } from "react-icons/fa";
 import { stretchPro, raleway } from "../../../styles/fonts";
-import { NextResponse } from "next/server";
 
 export default async function Page({ params: { slug } }) {
-  const projects = await fetch(process.env.PROJECTS_API);
+  const projects = await fetch(process.env.NEXT_PUBLIC_PROJECTS_API);
   const projectsData = await projects.json();
   const project = projectsData?.find((project) => project.slug == slug);
 
   return (
-    <section className='px-[2rem] bg-white dark:bg-black lg:px-[20rem] w-full flex flex-col min-h-screen'>
+    <section className='px-[2rem] bg-white dark:bg-slate-950 lg:px-[20rem] w-full flex flex-col min-h-screen'>
       {/* Project Full Thumbnail Desktop */}
       <div className='hidden lg:block relative h-[400px] w-full mb-6'>
         <Image
