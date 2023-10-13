@@ -5,7 +5,7 @@ import { FaLink, FaGithub } from "react-icons/fa";
 import { stretchPro, raleway } from "../../../styles/fonts";
 
 export default async function Page({ params: { slug } }) {
-  const projects = await fetch(process.env.PROJECTS_API);
+  const projects = await fetch(process.env.NEXT_PUBLIC_PROJECTS_API);
   const projectsData = await projects.json();
   const project = projectsData?.find((project) => project.slug == slug);
 
