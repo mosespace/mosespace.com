@@ -5,7 +5,7 @@ import { BsArrowRight } from "react-icons/bs";
 
 export default function Hero() {
   return (
-    <main className='bg-white dark:bg-black lg:pt-[10rem] bg-cover bg-center flex flex-col justify-center items-center min-h-screen w-full h-screen lg:overflow-hidden'>
+    <main className='bg-white dark:bg-[#222325] lg:pt-[10rem] flex flex-col justify-center items-center min-h-screen w-full h-screen lg:overflow-hidden'>
       <div className='flex flex-col justify-center items-center pt-[2rem] lg:pt-0 lg:text-center px-[2rem] sm:max-w-[75%] lg:max-w-[75%]'>
         <h1
           className={`${stretchPro2.className} leading-[1.1] text-black dark:text-white lg:text-[5rem] text-[2rem] text-center uppercase`}

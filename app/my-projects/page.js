@@ -10,7 +10,7 @@ export default async function page() {
   // console.log(projectsData);
   return (
     <PageWrapper>
-      <main className='flex bg-white dark:bg-slate-950 lg:pt-[16rem] pt-[8rem]  min-h-screen lg:h-screen lg:overflow-hidden'>
+      <main className='flex bg-white dark:bg-[#222325] lg:pt-[16rem] pt-[8rem]  min-h-screen lg:h-screen lg:overflow-hidden'>
         <Projects data={projectsData} />
       </main>
     </PageWrapper>

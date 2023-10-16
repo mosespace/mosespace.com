@@ -1,7 +1,6 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import DemoImg from "../../../public/bg.jpg";
 import { FaLink, FaGithub } from "react-icons/fa";
 import { stretchPro, raleway } from "../../../styles/fonts";
 
@@ -14,7 +13,7 @@ export default async function Page({ params: { slug } }) {
   // console.log(project.project_image[1]);
 
   return (
-    <section className='px-[2rem] bg-white dark:bg-black lg:px-[20rem] w-full flex flex-col min-h-screen'>
+    <section className='px-[2rem] bg-white dark:bg-[#222325] lg:px-[20rem] w-full flex flex-col min-h-screen'>
       {/* Project Full Thumbnail Desktop */}
       <div className='hidden lg:flex rounded-b-[2rem] items-center justify-center bg-[#f1c40f] h-[400px] w-full mb-6'>
         <h2
