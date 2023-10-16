@@ -1,93 +1,68 @@
 [
   {
     "id": "001",
-    "slug": "portfolio",
+    "slug": "advice-generator",
     "project_year": "2023",
-    "project_title": "Portfolio",
-    "project_link": "/detailed-page",
+    "project_title": "Advice Generator",
     "project_short_des": "Landing (WEB)",
-    "project_image": "/project_images/proj1.jpg",
-    "project_category": "Development, Design Ux/UI"
+    "project_thumbnail": "/project_images/proj10.webp",
+    "project_image": [
+      "/advice-generator/mobile-02.svg",
+      "/advice-generator/mobile-01.svg"
+    ],
+    "project_description": " Welcome to the Advice Generator. 💚 \n Discover wisdom and inspiration with the Advice Generator, your go-to source for insightful quotes and advice to brighten your day. Our application is designed to provide you with a daily dose of motivation, positivity and guidance, sourced from a curated collection of quotes from various thought leaders, writers, and thinkers. \n \n Key Features: \n Daily Inspiration: Start your day with a fresh piece of advice that will inspire and motivate you to reach your goals. \n Random Advice: Need a quick pick-me-up or some words of wisdom? Our random advice feature provides instant guidance at the click of a button. \n Share and Save: Share your favorite quotes with friends and save them for later to keep the inspiration alive. \n API-Powered: We use the Rapid API to ensure that you receive a wide variety of quotes and advice for every occasion. \n \n How It Works: \n Our application fetches quotes from the Rapid API and presents them to you in a user-friendly interface. With a simple click, you can access new advice to fuel your day, reflect on life's challenges, or simply share with your social network. \n \n Why Use the Advice Generator: \n Whether you're seeking motivation, dealing with a tough day, or simply looking for words of encouragement, the Advice Generator is your go-to source for a daily boost of positivity. Start your journey towards a brighter, more inspired you with just a few clicks. \n \n Join me Today: Join our community of positivity seekers and let our advice generator be your daily companion on your journey towards self-improvement, personal growth, and a more fulfilling life. Start each day with a fresh perspective – embrace the power of words. \n \n Ready to take the first step? Click the 'Live Link' button to have a look.",
+    "project_category": "Development \n \n Design Ux/UI",
+    "project_live_link": "https://advice-generator-beta1.vercel.app/",
+    "project_github_link": "https://github/mosespace/advice-generator"
   },
   {
     "id": "002",
-    "project_title": "Nile Post Clone",
-    "project_short_des": "Fullstack App",
-    "slug": "nile-post-clone",
-    "project_image": "/project_images/proj2.jpg",
-    "project_link": "/detailed-page",
-    "project_category": "Development, Design Ux/UI"
+    "slug": "agape-veterinary-services",
+    "project_year": "2023",
+    "project_title": "Agape Veterinary",
+    "project_short_des": "Landing (WEB)",
+    "project_thumbnail": "/project_images/proj10.webp",
+    "project_image": [
+      "/agape-vet/mobile-01-01.svg",
+      "/agape-vet/mobile-02-01.svg",
+      "/agape-vet/mobile-03-01.svg"
+    ],
+    "project_description": " Agape Veterinary: Your Trusted Partner for Exceptional Veterinary Services \n \n Welcome to Agape Veterinary, your go-to destination for top-notch veterinary care for your beloved animal companions. At Agape Veterinary, we understand the special bond you share with your pets, and we are dedicated to providing them with the highest quality healthcare and compassionate service. \n \n Our team of experienced veterinarians and caring staff is committed to ensuring the well-being of your furry, feathered, or scaly friends. We offer a comprehensive range of veterinary services, including wellness check-ups, vaccinations, surgery, dental care, and more. Whether your pet is a cherished member of your family or a treasured working animal, we have the expertise and resources to meet their unique needs. \n \n What sets Agape Veterinary apart is our unwavering commitment to personalized care. We take the time to get to know you and your pet, tailoring our services to meet their individual requirements. We believe that each animal is special, and their care should reflect that.\n \n Our modern and well-equipped facility is designed with both your pet's comfort and your peace of mind in mind. We employ the latest in veterinary technology to provide accurate diagnoses and effective treatments. Rest assured, your pet is in safe and caring hands at Agape Veterinary.\n \n At Agape Veterinary, we're not just a veterinary clinic; we're a community of pet lovers who share your passion for the health and happiness of your animals. We are here to support you and provide guidance on all aspects of pet care, from nutrition to behavior. Our aim is to empower you with the knowledge and resources you need to be the best pet parent you can be.\n \n When you choose Agape Veterinary, you're choosing a partner in your pet's lifelong well-being. We take pride in delivering high-quality veterinary services and creating a warm and welcoming environment for you and your pets. Join our family of satisfied clients who trust us with the care of their furry family members. \n \n Experience the Agape Veterinary difference. Contact us today to schedule an appointment or learn more about our comprehensive range of veterinary services. Your pet's health and happiness are our top priorities.",
+    "project_category": "Development \n \n Design Ux/UI",
+    "project_live_link": "https://agape-vet.vercel.app/",
+    "project_github_link": "https://github/mosespace/advice-generator"
   },
   {
     "id": "003",
-    "project_title": "Agape Vet",
-    "project_short_des": "Landing (WEB)",
-    "slug": "agape-vet",
-    "project_image": "/project_images/proj3.jpg",
-    "project_link": "/detailed-page",
-    "project_category": "Development, Design Ux/UI"
+    "slug": "avail-chat-gpt-clone",
+    "project_year": "2023",
+    "project_title": "Avail CHAT-GPT-4",
+    "project_short_des": "Full Stack",
+    "project_thumbnail": "/project_images/proj10.webp",
+    "project_image": [
+      "/avail-gpt/mobile-01.svg",
+      "/avail-gpt/mobile-02-01.svg"
+    ],
+    "project_description": "Avail-CHATGPT-4 is an innovative chatbot powered by cutting-edge AI technology. Developed using Next.js, this project showcases the potential of artificial intelligence in the realm of natural language processing. \n \n Key Features: \n \n Next.js Framework: Avail-CHATGPT-4 is built on the Next.js framework, ensuring high performance, SEO optimization, and a seamless user experience. \n \n Rapid API Integration: The chatbot leverages the capabilities of Rapid API to provide real-time responses and enhance its functionality. \n \n AI-Powered Conversations: Avail-CHATGPT-4 is equipped with GPT-3.5, a powerful AI language model. It can engage in natural and dynamic conversations, making it a valuable tool for various applications. \n \n Customization: Tailor the chatbot to suit your needs, whether it's for customer support, virtual assistance, or interactive storytelling. Avail-CHATGPT-4 is highly adaptable and can be integrated into your projects. \n \n Responsive Design: The chatbot boasts a responsive design, ensuring compatibility with a wide range of devices and screen sizes. \n Seamless User Interaction: With its intuitive interface, Avail-CHATGPT-4 provides an engaging and user-friendly chat experience, making it an ideal solution for enhancing user engagement. \n \n Why Avail-CHATGPT-4? \n \n Avail-CHATGPT-4 is more than just a chatbot; it's a demonstration of the possibilities that AI offers in enhancing human-computer interactions. Whether you're a developer looking to integrate AI into your projects or a business seeking to improve customer engagement, this chatbot is a powerful tool in your arsenal. \n \n Explore the future of AI-powered conversations with Avail-CHATGPT-4 and witness the potential of natural language processing in action. ",
+    "project_category": "Development \n \n Design Ux/UI",
+    "project_live_link": "https://chatgpt4-clone.vercel.app/",
+    "project_github_link": "https://github.com/mosespace/chatgpt-clone"
   },
   {
-    "id": "004",
-    "project_title": "UNEB Clone",
-    "project_short_des": "Landing (WEB)",
-    "slug": "uneb-clone",
-    "project_image": "/project_images/proj4.png",
-    "project_link": "/detailed-page",
-    "project_category": "Development, Design Ux/UI"
-  },
-  {
-    "id": "005",
-    "project_title": "Mihasoft",
-    "project_short_des": "Social Media Design",
-    "slug": "mihasoft-project",
-    "project_image": "/project_images/proj5.jpg",
-    "project_link": "/detailed-page",
-    "project_category": "Development, Design Ux/UI"
-  },
-  {
-    "id": "006",
-    "project_title": "E and D Website",
-    "project_short_des": "Fullstack App",
-    "slug": "e-and-d-website",
-    "project_image": "/project_images/proj6.png",
-    "project_link": "/detailed-page",
-    "project_category": "Development, Design Ux/UI"
-  },
-  {
-    "id": "007",
-    "project_title": "Phaneroo Clone",
-    "project_short_des": "Landing (WEB)",
-    "slug": "phaneroo-clone",
-    "project_image": "/project_images/proj7.jpg",
-    "project_link": "/detailed-page",
-    "project_category": "Development, Design Ux/UI"
-  },
-  {
-    "id": "008",
+    "id": "003",
+    "slug": "quiz-app-kisakye-moses",
+    "project_year": "2023",
     "project_title": "Quiz App",
-    "project_short_des": "Game Application",
-    "slug": "quiz-app",
-    "project_image": "/project_images/proj8.jpg",
-    "project_link": "/detailed-page",
-    "project_category": "Development, Design Ux/UI"
-  },
-  {
-    "id": "009",
-    "project_title": "BrandRider",
-    "project_short_des": "Fullstack App",
-    "slug": "brandrider-project",
-    "project_image": "/project_images/proj9.jpg",
-    "project_link": "/detailed-page",
-    "project_category": "Development, Design Ux/UI"
-  },
-  {
-    "id": "0010",
-    "project_title": "Project 10",
-    "project_short_des": "Graphics Design",
-    "slug": "project-10",
-    "project_image": "/project_images/proj10.jpg",
-    "project_link": "/detailed-page",
-    "project_category": "Development, Design Ux/UI"
+    "project_short_des": "Full Stack",
+    "project_thumbnail": "/project_images/proj10.webp",
+    "project_image": [
+      "/quiz-hack/mobile-01-01.svg",
+      "/quiz-hack/mobile-02-01.svg",
+      "/quiz-hack/mobile-03-01.svg"
+    ],
+    "project_description": "Avail-CHATGPT-4 is an innovative chatbot powered by cutting-edge AI technology. Developed using Next.js, this project showcases the potential of artificial intelligence in the realm of natural language processing. \n \n Key Features: \n \n Next.js Framework: Avail-CHATGPT-4 is built on the Next.js framework, ensuring high performance, SEO optimization, and a seamless user experience. \n \n Rapid API Integration: The chatbot leverages the capabilities of Rapid API to provide real-time responses and enhance its functionality. \n \n AI-Powered Conversations: Avail-CHATGPT-4 is equipped with GPT-3.5, a powerful AI language model. It can engage in natural and dynamic conversations, making it a valuable tool for various applications. \n \n Customization: Tailor the chatbot to suit your needs, whether it's for customer support, virtual assistance, or interactive storytelling. Avail-CHATGPT-4 is highly adaptable and can be integrated into your projects. \n \n Responsive Design: The chatbot boasts a responsive design, ensuring compatibility with a wide range of devices and screen sizes. \n Seamless User Interaction: With its intuitive interface, Avail-CHATGPT-4 provides an engaging and user-friendly chat experience, making it an ideal solution for enhancing user engagement. \n \n Why Avail-CHATGPT-4? \n \n Avail-CHATGPT-4 is more than just a chatbot; it's a demonstration of the possibilities that AI offers in enhancing human-computer interactions. Whether you're a developer looking to integrate AI into your projects or a business seeking to improve customer engagement, this chatbot is a powerful tool in your arsenal. \n \n Explore the future of AI-powered conversations with Avail-CHATGPT-4 and witness the potential of natural language processing in action. ",
+    "project_category": "Development \n \n Design Ux/UI",
+    "project_live_link": "https://quizz-56c9vjga2-mosespace.vercel.app/",
+    "project_github_link": "https://github.com/mosespace/quizz-app"
   }
 ]
