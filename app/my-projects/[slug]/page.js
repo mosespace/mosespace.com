@@ -1,7 +1,6 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import DemoImg from "../../../public/bg.jpg";
 import { FaLink, FaGithub } from "react-icons/fa";
 import { stretchPro, raleway } from "../../../styles/fonts";
 
