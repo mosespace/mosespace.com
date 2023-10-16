@@ -8,19 +8,14 @@ export default function Projects({ data }) {
   const [currentProject, setCurrentProject] = useState(null);
 
   return (
-    <div className='px-[2rem] md:px-0 flex flex-col lg:flex-row md:justify-between w-full md:w-full'>
+    <div className='px-[2rem] lg:px-[10rem] flex flex-col lg:flex-row md:justify-between w-full'>
       <div className='hidden lg:block relative w-[850px] h-[650px]'>
         {data.map((project) => (
-          <div
-            key={`${project.id}-image`}
-            className={`absolute top-0 left-0 w-[850px] h-[650px]`}
-          >
+          <div key={`${project.id}-image`}>
             <Image
-              src={project.project_image}
-              layout='fill'
-              loading='lazy'
-              objectFit='cover'
-              className={`rounded-tr-[2rem]
+              src={project.project_thumbnail}
+              fill
+              className={`rounded-tr-[2rem] rounded-bl-[2rem]  w-full h-full object-cover
               ${
                 currentProject === project.id
                   ? "transition duration-300 delay-10 ease-out"
@@ -32,7 +27,7 @@ export default function Projects({ data }) {
         ))}
       </div>
 
-      <div className='flex lg:justify-between flex-col'>
+      <div className='flex flex-col'>
         <div className='flex justify-between lg:flex-row gap-[.8rem] lg:gap-[4rem] border-slate-950 dark:border-slate-50 border-b-2 pb-2 md:pb-4'>
           <h2
             className={`font-bold text-xl md:text-5xl uppercase ${stretchPro.className}`}
@@ -44,7 +39,7 @@ export default function Projects({ data }) {
           </button>
         </div>
 
-        <ul className='flex flex-col justify-between text-2xl lg:gap-4 py-[1rem] lg:overflow-y-auto lg:hover:overflow-scroll lg:no-scrollbar pt-[.8rem] lg:pt-[.8rem]'>
+        <ul className='flex flex-col justify-between text-2xl lg:gap-4 py-[1rem] overflow-y-auto lg:hover:overflow-scroll lg:no-scrollbar pt-[.8rem] lg:pt-[.8rem]'>
           <div className='pt-[.5rem] md:pt-[1.5rem]'>
             {data.map((project, id) => {
               return (

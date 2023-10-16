@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import { NextResponse } from "next/server";
 
-export default function getProjects() {
+export function getProjects() {
   const filePath = path.join(process.cwd(), "projects.json");
   const fileContents = fs.readFileSync(filePath, "utf8");
   const projects = JSON.parse(fileContents);
