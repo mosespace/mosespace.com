@@ -32,13 +32,54 @@ export default function About() {
           </p>
         </div>
         <div className='flex mt-[2rem] flex-wrap justify-between'>
-          <FaReact className='text-[#D1D3D7] text-[3rem] lg:text-[6rem] cursor-pointer hover:text-blue-400 transition-all ease-in-out' />
-          <IoLogoJavascript className='text-[#D1D3D7] text-[3rem] lg:text-[6rem]  cursor-pointer hover:text-amber-400 transition-all ease-in-out' />
-          <SiTypescript className='text-[#D1D3D7] text-[3rem] lg:text-[6rem]  cursor-pointer hover:text-blue-600 transition-all ease-in-out' />
-          <SiTailwindcss className='text-[#D1D3D7] text-[3rem] lg:text-[6rem] cursor-pointer hover:text-blue-400 transition-all ease-in-out' />
-          <SiMongodb className='text-[#D1D3D7] text-[3rem] lg:text-[6rem] cursor-pointer hover:text-green-600 transition-all ease-in-out' />
-          <SiFirebase className='text-[#D1D3D7] text-[3rem] lg:text-[6rem] cursor-pointer hover:text-amber-500 transition-all ease-in-out' />
-          <TbBrandNextjs className='text-[#D1D3D7] text-[3rem] lg:text-[6rem] cursor-pointer hover:text-blue-300 transition-all ease-in-out' />
+          <div className='group'>
+            <FaReact className='text-[#D1D3D7] text-[3rem] lg:text-[6rem] cursor-pointer hover:text-blue-400 transition-all ease-in-out' />
+            <span className='group-hover:opacity-100 transition-opacity bg-gray-800 dark:bg-gray-50 px-1 text-sm text-gray-100 dark:text-black rounded-md absolute top-[58%] -translate-x-1 translate-y-1 opacity-0 mx-auto'>
+              React
+            </span>
+          </div>
+
+          <div className='group'>
+            <IoLogoJavascript className='text-[#D1D3D7] text-[3rem] lg:text-[6rem]  cursor-pointer hover:text-amber-400 transition-all ease-in-out' />
+            <span className='group-hover:opacity-100 transition-opacity bg-gray-800 dark:bg-gray-50 px-1 text-sm text-gray-100 dark:text-black rounded-md absolute top-[58%] -translate-x-1 translate-y-1 opacity-0 mx-auto'>
+              JavaScript
+            </span>
+          </div>
+
+          <div className='group'>
+            <SiTypescript className='text-[#D1D3D7] text-[3rem] lg:text-[6rem]  cursor-pointer hover:text-blue-600 transition-all ease-in-out' />
+            <span className='group-hover:opacity-100 transition-opacity bg-gray-800 dark:bg-gray-50 px-1 text-sm text-gray-100 dark:text-black rounded-md absolute top-[58%] -translate-x-1 translate-y-1 opacity-0 mx-auto'>
+              TypeScript
+            </span>
+          </div>
+
+          <div className='group'>
+            <SiTailwindcss className='text-[#D1D3D7] text-[3rem] lg:text-[6rem] cursor-pointer hover:text-blue-400 transition-all ease-in-out' />
+            <span className='group-hover:opacity-100 transition-opacity bg-gray-800 dark:bg-gray-50 px-1 text-sm text-gray-100 dark:text-black rounded-md absolute top-[58%] -translate-x-1 translate-y-1 opacity-0 mx-auto'>
+              Tailwind
+            </span>
+          </div>
+
+          <div className='group'>
+            <span className='group-hover:opacity-100 transition-opacity bg-gray-800 dark:bg-gray-50 px-1 text-sm text-gray-100 dark:text-black rounded-md absolute top-[58%] -translate-x-1 translate-y-1 opacity-0 mx-auto'>
+              MongoDB
+            </span>
+            <SiMongodb className='text-[#D1D3D7] text-[3rem] lg:text-[6rem] cursor-pointer hover:text-green-600 transition-all ease-in-out' />
+          </div>
+
+          <div className='group'>
+            <SiFirebase className='text-[#D1D3D7] text-[3rem] lg:text-[6rem] cursor-pointer hover:text-amber-500 transition-all ease-in-out' />
+            <span className='group-hover:opacity-100 transition-opacity bg-gray-800 dark:bg-gray-50 px-1 text-sm text-gray-100 dark:text-black rounded-md absolute top-[58%] -translate-x-1 translate-y-1 opacity-0 mx-auto'>
+              Firebase
+            </span>
+          </div>
+
+          <div className='group'>
+            <TbBrandNextjs className='text-[#D1D3D7] text-[3rem] lg:text-[6rem] cursor-pointer hover:text-blue-300 transition-all ease-in-out' />
+            <span className='group-hover:opacity-100 transition-opacity bg-gray-800 dark:bg-gray-50 px-1 text-sm text-gray-100 dark:text-black rounded-md absolute top-[58%] -translate-x-1 translate-y-1 opacity-0 mx-auto'>
+              NextJs
+            </span>
+          </div>
         </div>
         <div className='flex'></div>
       </div>
