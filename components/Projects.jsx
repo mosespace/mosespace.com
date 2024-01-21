@@ -4,16 +4,6 @@ export default function Projects() {
   return (
     <div className='py-12'>
       <div className='m-auto lg:m-0 px-4 lg:px-0 text-gray-600 md:px-12'>
-        <div className='mb-12 space-y-2k text-start'>
-          <h2 className='text-3xl font-bold text-gray-800 md:text-4xl dark:text-white'>
-            Sharing is Caring
-          </h2>
-          <p className='text-gray-600 dark:text-gray-300'>
-            Quam hic dolore cumque voluptate rerum beatae et quae, tempore sunt,
-            debitis dolorum officia aliquid explicabo? Excepturi, voluptate?
-          </p>
-        </div>
-
         <div className='mx-auto'>
           <div className='group relative -mx-4 mb-3 sm:-mx-8 p-6 sm:p-8 rounded-3xl bg-white dark:bg-transparent border border-transparent hover:border-gray-100 dark:shadow-none dark:hover:border-gray-700 dark:hover:bg-gray-800 shadow-2xl shadow-transparent hover:shadow-gray-600/10 sm:gap-8 sm:flex transition duration-300 hover:z-10'>
             <div className='sm:w-2/6 rounded-3xl overflow-hidden transition-all duration-500 group-hover:rounded-xl'>
