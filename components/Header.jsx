@@ -16,13 +16,15 @@ export default function Header() {
             <Image
               width={300}
               height={300}
-              src='/me.jpg'
+              src='/project_images/proj10.webp'
               className='lg:w-14 w-full object-cover h-14 lg:rounded-full'
               alt='Kisakye Moses Full-Stack Software Developer Located in Kampala Uganda.'
             />
             <span className='flex flex-col text-xl'>
               <h2 className='uppercase '>Kisakye Moses</h2>
-              <span className='text-sm'>Senior Front-End Developer</span>
+              <span className='text-sm text-orange-600'>
+                Senior FullStack Developer
+              </span>
             </span>
           </Link>
           <div className='flex gap-[1rem] items-center lg:justify-center text-xl'>
