@@ -1,14 +1,8 @@
-const nextConfig = {};
-module.exports = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "img.freepik.com",
-        port: "",
-        pathname: "/free-photo/**", // Update this to match your image URLs
-      },
-    ],
+    domains: ["images.unsplash.com","utfs.io"],
   },
 };
+
 module.exports = nextConfig;
