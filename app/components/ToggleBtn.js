@@ -2,7 +2,7 @@
 import React from "react";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
-import { BsMoonFill, BsSunFill } from "react-icons/bs";
+import { BsMoon, BsSun } from "react-icons/bs";
 
 export default function ToggleBtn() {
   const { theme, setTheme } = useTheme();
@@ -19,13 +19,13 @@ export default function ToggleBtn() {
 
   return (
     <button
-      className='px-[.7rem] py-[.8rem] rounded-md'
+      className='h-6 w-6'
       onClick={() => setTheme(theme === "light" ? "dark" : "light")}
     >
       {theme === "light" ? (
-        <BsMoonFill size={21} color='black dark:text-white' />
+        <BsMoon size={21} color='black dark:text-white' />
       ) : (
-        <BsSunFill size={21} color='black dark:text-white' />
+        <BsSun size={21} color='black dark:text-white' />
       )}
     </button>
   );
