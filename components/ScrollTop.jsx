@@ -16,4 +16,3 @@ export default function ScrollTop() {
     </div>
   );
 }
-// className='flex items-center gap-1 rounded-full bg-slate-50 dark:bg-transparent dark:border-[1.5px] py-2 px-4'
