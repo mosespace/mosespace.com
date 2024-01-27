@@ -11,9 +11,6 @@ import Header from "@/components/Header";
 import ScrollTop from "@/components/ScrollTop";
 
 export const metadata = {
-  //   title: "Kisakye Moses | Mosespace",
-  //   description: "Full-Stack Software Developer Located in Kampala Uganda.",
-  // };  metadataBase: new URL("https://www.jazzafricaadventures.com"),
   title: {
     default:
       "Kisakye Moses - Website Developer Ug | Full-Stack Software Developer Located in Kampala Uganda.",
