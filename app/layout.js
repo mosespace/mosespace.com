@@ -168,7 +168,7 @@ export default function RootLayout({ children }) {
         <Provider>
           <ToastContainer position='top-center' />
           {/* <Alert /> */}
-          <div className='dark:bg-[#030712] bg-white w-full overflow-hidden'>
+          <div className='dark:bg-bgBlack bg-white w-full overflow-hidden bg-black-radial'>
             <div className='container max-w-4xl m-auto space-y-8 px-6 py-12 text-zinc-950 dark:text-white md:px-12 lg:px-20'>
               <Header />
               <ScrollTop />

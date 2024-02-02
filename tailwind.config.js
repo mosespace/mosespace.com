@@ -12,10 +12,12 @@ module.exports = {
       fontFamily: {
         sans: ["Raleway", ...defaultTheme.fontFamily.sans],
       },
+      backgroundColor: {
+        "bgBlack": "hsla(254, 0%, 0%, 1)",
+      },
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "black-radial":
+          "radial-gradient(at 0% 69%, hsla(322, 100%, 0%, 1) 0px, transparent 50%), radial-gradient(at 83% 71%, hsla(161, 93%, 30%, 1) 0px, transparent 50%)",
       },
     },
   },
@@ -27,5 +29,4 @@ module.exports = {
   plugins: [],
 
   darkMode: "class",
-
 };
