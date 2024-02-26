@@ -15,7 +15,7 @@ export const metadata = {
       "%s | Kisakye Moses - Website Developer Ug | Full-Stack Software Developer Located in Kampala Uganda.",
   },
   description:
-    "Explore Uganda's wonders with Jazz Africa Adventures. Unforgettable safaris, national parks, mountains, hiking, and chimpanzee encounters. Expert guides, personalized attention. Discover Uganda today!",
+    "Uganda's number one software developer (Website developer). Full-Stack Software Developer Located in Kampala Uganda. I do digital marketing services at affordable prices allover the world. Graphics Designing, Social Media Marketing, Website Development i will offer all the above at affordable rates. Contact me for more website development +256 770 981 193 or +256 704 122 863",
   keywords: [
     "Kisakye Moses",
     "Moses",
@@ -124,8 +124,8 @@ export const metadata = {
     "Project management Developer",
   ],
   authors: [{ name: "Kisakye Moses", url: "https://www.mosespace.com" }],
-  creator: "Kisakye Moses a.k.a Uncle Moses Ug |BrandRider",
-  publisher: "Kisakye Moses a.k.a Uncle Moses Ug |BrandRider",
+  creator: "Kisakye Moses a.k.a Uncle Moses Ug |Software Developer",
+  publisher: "Kisakye Moses a.k.a Uncle Moses Ug |Software Developer",
   openGraph: {
     title:
       "Kisakye Moses - Website Developer Ug | Full-Stack Software Developer Located in Kampala Uganda.",
@@ -164,7 +164,7 @@ export default function RootLayout({ children }) {
       <body className={`${raleway.className}`}>
         <Provider>
           <ToastContainer position='top-center' />
-          <div className='dark:bg-bgBlack bg-white w-full overflow-hidden bg-black-radial'>
+          <div className='dark:bg-zinc-950 bg-white w-full overflow-hidden'>
             <div className='container max-w-4xl m-auto space-y-8 px-6 py-12 text-zinc-950 dark:text-white md:px-12 lg:px-20'>
               <Header />
               <ScrollTop />

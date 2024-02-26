@@ -28,7 +28,7 @@ export default function ScrollTop() {
   }, []);
 
   return (
-    <div className='fixed lg:bottom-8 bottom-10 z-30 right-0 md:right-[16rem]'>
+    <div className='fixed lg:bottom-8 bottom-10 z-30 right-0 md:right-[14rem]'>
       <div className='flex items-center justify-center md:justify-between gap-4 bg-slate-50 dark:bg-orange-500 py-2 px-4 md:px-6 rounded-l-full md:rounded-full'>
         <ToggleBtn />
         {showScrollButton && (
