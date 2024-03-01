@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "prisma": "post install"
+    "postinstall": "prisma generate"
   },
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
