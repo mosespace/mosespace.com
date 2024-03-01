@@ -2,12 +2,17 @@
 import Link from "next/link";
 import Image from "next/image";
 import ToggleBtn from "@/app/components/ToggleBtn";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
+  const pathname = usePathname();
+  if (pathname.startsWith("/admin")) {
+    return null;
+  }
   return (
     <div>
       {/*Desktop Primary Nav Bar */}
-      <nav className='flex flex-col justify-between py-[1rem] lg:text-3xl text-2xl font-bold text-gray-900 dark:text-white px-4 lg:px-0'>
+      <nav className='flex flex-col justify-between py-[1rem] lg:text-3xl text-2xl font-bold text-gray-900 dark:text-white px-1 lg:px-0'>
         <div className='flex lg:flex-row gap-3 lg:gap-0 flex-col lg:justify-between lg:items-center'>
           <Link
             href='/'

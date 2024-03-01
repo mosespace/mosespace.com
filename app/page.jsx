@@ -26,7 +26,8 @@ export default function Home() {
         </div>
       </div>
       <Projects />
-      <div className='xl:container m-auto lg:px-6 text-gray-600 md:px-12 xl:px-0'>
+
+      {/* <div className='xl:container m-auto lg:px-6 text-gray-600 md:px-12 xl:px-0'>
         <div className='lg:space-y-2'>
           <h2 className='text-3xl font-bold text-gray-800 md:text-4xl dark:text-white'>
             Recent Blogs
@@ -37,7 +38,7 @@ export default function Home() {
           </p>
         </div>
       </div>
-      <Blog />
+      <Blog /> */}
     </div>
   );
 }

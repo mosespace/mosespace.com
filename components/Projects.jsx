@@ -61,16 +61,16 @@ export default function Projects() {
           {projects?.splice(0, 4).map((project, index) => (
             <div
               key={index}
-              className='group relative -mx-2 mb-3 sm:-mx-4 lg:lg:p-4 sm:p-6 rounded-2xl bg-white dark:bg-transparent border border-transparent hover:border-gray-100 dark:shadow-none dark:hover:border-gray-700 dark:hover:bg-gray-800 shadow-2xl shadow-transparent hover:shadow-gray-600/10 sm:gap-4 sm:flex transition duration-300 hover:z-10'
+              className='group relative -mx-2 mb-3 sm:-mx-4 lg:lg:p-4 sm:p-6 rounded-2xl bg-white dark:bg-transparent border border-transparent lg:hover:border-gray-100 dark:shadow-none dark:lg:hover:border-gray-700 dark:lg:hover:bg-gray-800 shadow-2xl shadow-transparent lg:hover:shadow-gray-600/10 sm:gap-4 sm:flex transition duration-300 lg:hover:z-10'
             >
-              <div className='sm:w-2/6 rounded-2xl overflow-hidden transition-all duration-500 group-hover:rounded-xl'>
+              <div className='sm:w-2/6 rounded-2xl overflow-hidden transition-all duration-500 group-lg:hover:rounded-xl'>
                 <Image
                   src={project.image}
                   alt='Kisakye Moses Project 1'
                   loading='lazy'
-                  width='1000'
-                  height='100'
-                  className='h-32 sm:h-full w-full object-cover object-top transition duration-500 group-hover:scale-105'
+                  width={1080}
+                  height={1080}
+                  className='h-[12rem] lg:h-full sm:h-full w-full object-cover object-center lg:object-top transition duration-500 lg:group-hover:scale-105'
                 />
               </div>
 
@@ -88,13 +88,13 @@ export default function Projects() {
                 <div className='flex gap-4'>
                   <a
                     href='#'
-                    className='px-3 py-1 rounded-full border border-gray-100 text-sm font-medium text-primary transition duration-300 hover:border-transparent hover:bg-primary hover:text-orange-600 dark:border-gray-700 dark:text-gray-300'
+                    className='px-3 py-1 rounded-full border border-gray-100 text-sm font-medium text-primary transition duration-300 lg:hover:border-transparent lg:hover:bg-primary lg:hover:text-orange-600 dark:border-gray-700 dark:text-gray-300'
                   >
                     Code
                   </a>
                   <a
                     href='#'
-                    className='px-3 py-1 rounded-full border border-gray-100 text-sm font-medium text-primary transition duration-300 hover:border-transparent hover:bg-primary hover:text-orange-600 dark:border-gray-700 dark:text-gray-300'
+                    className='px-3 py-1 rounded-full border border-gray-100 text-sm font-medium text-primary transition duration-300 lg:hover:border-transparent lg:hover:bg-primary lg:hover:text-orange-600 dark:border-gray-700 dark:text-gray-300'
                   >
                     Live Preview
                   </a>

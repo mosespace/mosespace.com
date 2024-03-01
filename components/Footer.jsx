@@ -1,9 +1,16 @@
+"use client";
 import Link from "next/link";
 import { FaDiscord } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { BsGithub, BsYoutube } from "react-icons/bs";
+import { usePathname } from "next/navigation";
 
 export default function Footer() {
+  const pathname = usePathname();
+  if (pathname.startsWith("/admin")) {
+    return null;
+  }
+
   return (
     <footer className='flex flex-wrap items-center justify-between gap-4 border-b pb-4'>
       <h2 className='font-bold text-base'>

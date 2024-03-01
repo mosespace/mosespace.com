@@ -2,7 +2,7 @@ import React from "react";
 
 export default function SubHeadings({ title, description }) {
   return (
-    <div className='mb-12 space-y-2k text-start'>
+    <div className='mb-12 text-start'>
       <h2 className='text-lg font-bold text-gray-800 md:text-xl mb-2 dark:text-white'>
         {title}
       </h2>
