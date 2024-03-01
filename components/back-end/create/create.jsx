@@ -128,7 +128,7 @@ export default function Create({ initialData }) {
             ) : (
               <div className='flex justify-between'>
                 <button className='inline-flex items-center px-5 py-2.5 mt-4 sm:mt-6 text-sm font-medium text-center text-white bg-green-700 rounded-lg focus:ring-4  hover:bg-green-800'>
-                  {initialData ? <>Update</> : <>Create</>}
+                  {initialData ? "Update" : "Create"}
                 </button>
                 <button
                   type='button'
