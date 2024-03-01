@@ -1,59 +1,11 @@
+import { getData } from "@/utils/getData";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
-export default function Projects() {
-  const projects = [
-    {
-      date: "July 27 2023",
-      image: "/project_images/proj8.jpg",
-      title:
-        "Provident de illo eveniet commodi fuga fugiat laboriosam expedita.July 27 2023",
-      description:
-        "Laudantium in, voluptates ex placeat quo harum aliquam totam,doloribus eum impedit atque...",
-      preview: "/",
-      code: "/",
-    },
-    {
-      date: "July 27 2023",
-      image: "/project_images/proj8.jpg",
-      title:
-        "Provident de illo eveniet commodi fuga fugiat laboriosam expedita.July 27 2023",
-      description:
-        "Laudantium in, voluptates ex placeat quo harum aliquam totam,doloribus eum impedit atque...",
-      preview: "/",
-      code: "/",
-    },
-    {
-      date: "July 27 2023",
-      image: "/project_images/proj8.jpg",
-      title:
-        "Provident de illo eveniet commodi fuga fugiat laboriosam expedita.July 27 2023",
-      description:
-        "Laudantium in, voluptates ex placeat quo harum aliquam totam,doloribus eum impedit atque...",
-      preview: "/",
-      code: "/",
-    },
-    {
-      date: "July 27 2023",
-      image: "/project_images/proj8.jpg",
-      title:
-        "Provident de illo eveniet commodi fuga fugiat laboriosam expedita.July 27 2023",
-      description:
-        "Laudantium in, voluptates ex placeat quo harum aliquam totam,doloribus eum impedit atque...",
-      preview: "/",
-      code: "/",
-    },
-    {
-      date: "July 27 2023",
-      image: "/project_images/proj8.jpg",
-      title:
-        "Provident de illo eveniet commodi fuga fugiat laboriosam expedita.July 27 2023",
-      description:
-        "Laudantium in, voluptates ex placeat quo harum aliquam totam,doloribus eum impedit atque...",
-      preview: "/",
-      code: "/",
-    },
-  ];
+export default async function Projects() {
+  const projects = await getData("projects");
+  // console.log(projects)
   return (
     <div className='py-8'>
       <div className='m-auto lg:m-0 px-4 lg:px-0 text-gray-600 md:px-12'>
@@ -70,7 +22,7 @@ export default function Projects() {
                   loading='lazy'
                   width={1080}
                   height={1080}
-                  className='h-[12rem] lg:h-full sm:h-full w-full object-cover object-center lg:object-top transition duration-500 lg:group-hover:scale-105'
+                  className='h-[12rem] lg:h-56 sm:h-full w-full object-cover object-center lg:object-top transition duration-500 lg:group-hover:scale-105'
                 />
               </div>
 
@@ -78,26 +30,26 @@ export default function Projects() {
                 <span className='mt-4 mb-2 inline-block font-medium text-gray-400 dark:text-gray-500 sm:mt-0'>
                   {project.date}
                 </span>
-                <h3 className='text-xl font-semibold text-gray-800 dark:text-white'>
+                <h3 className='text-xl font-semibold text-gray-800 dark:text-white line-clamp-2'>
                   {project.title}
                 </h3>
-                <p className='my-4 text-gray-600 dark:text-gray-300'>
+                <p className='my-4 text-gray-600 dark:text-gray-300 line-clamp-3'>
                   {project.description}
                 </p>
 
                 <div className='flex gap-4'>
-                  <a
-                    href='#'
+                  <Link
+                    href={project.github_link}
                     className='px-3 py-1 rounded-full border border-gray-100 text-sm font-medium text-primary transition duration-300 lg:hover:border-transparent lg:hover:bg-primary lg:hover:text-orange-600 dark:border-gray-700 dark:text-gray-300'
                   >
                     Code
-                  </a>
-                  <a
-                    href='#'
+                  </Link>
+                  <Link
+                    href={project.preview_link}
                     className='px-3 py-1 rounded-full border border-gray-100 text-sm font-medium text-primary transition duration-300 lg:hover:border-transparent lg:hover:bg-primary lg:hover:text-orange-600 dark:border-gray-700 dark:text-gray-300'
                   >
                     Live Preview
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

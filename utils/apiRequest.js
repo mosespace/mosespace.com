@@ -19,25 +19,21 @@ export async function apiRequest(
       body: JSON.stringify(data),
     });
 
-    // console.log(response);
-
     if (response.ok) {
       setLoading(false);
       reset();
-      if (method === "PUT") {
-        toast.success(`Update ${postName} Created Successfully`);
+      if (method === "PATCH" || "DELETE") {
+        toast.success(`Done ${postName} Created Successfully`);
       } else {
         toast.success(`New ${postName} Created Successfully`);
       }
     } else {
       setLoading(false);
-      toast.error(
-        `It seems you have Link network error, please try again Data`
-      );
-      console.log(error);
+      toast.error(`Error: ${response.statusText}`);
+      console.error("Response Error:", response);
     }
   } catch (error) {
     setLoading(false);
-    console.error("Error in makePostRequest:", error);
+    console.error("Error in apiRequest:", error);
   }
 }

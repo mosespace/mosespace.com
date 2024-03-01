@@ -2,21 +2,26 @@ import db from "@/utils/db";
 import { NextResponse } from "next/server";
 
 export async function PATCH(req, { params: { id } }) {
-  console.log(id);
+  // console.log(id);
   try {
-    const { title, image, description } = req.json();
+    const { title, image, description, github_link, preview_link } =
+      await req.json();
+
+    console.log({ title, image, description, github_link, preview_link });
+
     const existingProject = await db.project.findUnique({
       where: {
         id,
       },
     });
 
-    // If the project doesn't exist, return a 404 Not Found response
+    // // If the project doesn't exist, return a 404 Not Found response
     if (!existingProject) {
       return NextResponse.json(
         {
           error: "Project not found",
-          message: "Failed to update project which doesn't exit in the database",
+          message:
+            "Failed to update project which doesn't exit in the database",
         },
         {
           status: 404,
@@ -27,16 +32,18 @@ export async function PATCH(req, { params: { id } }) {
     // Update the project properties with the new values
     const updatedProject = await db.project.update({
       where: {
-        id: existingProject.id,
+        id,
       },
       data: {
-        title
-        image
-        description
+        title,
+        image,
+        description,
+        github_link,
+        preview_link,
       },
     });
 
-    console.log("Project updated successfully:", updatedProject);
+    // console.log("Project updated successfully:", updatedProject);
     return NextResponse.json(updatedProject);
   } catch (error) {
     console.error("Error updating the project:", error);
@@ -66,7 +73,8 @@ export async function DELETE(req, { params: { id } }) {
       return NextResponse.json(
         {
           error: "Project not found",
-          message: "Failed to delete project which doesn't exit in the database",
+          message:
+            "Failed to delete project which doesn't exit in the database",
         },
         {
           status: 404,

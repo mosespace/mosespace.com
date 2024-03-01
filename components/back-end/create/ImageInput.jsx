@@ -34,7 +34,7 @@ export default function ImageInput({
       {imageUrl ? (
         <Image
           src={imageUrl}
-          alt='Item image'
+          alt={label}
           width={1000}
           height={667}
           className='w-full h-64 object-contain'

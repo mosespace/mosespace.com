@@ -3,8 +3,9 @@ import { NextResponse } from "next/server";
 
 export async function POST(req) {
   try {
-    const { title, image, description } = await req.json();
-    //  console.log({ description,title })
+    const { title, image, description, github_link, preview_link } =
+      await req.json();
+    //  console.log({ title, image, description, github_link, preview_link  })
 
     // Check if the project exists already in the database
     const existingProject = await db.project.findFirst({
@@ -33,10 +34,12 @@ export async function POST(req) {
         title,
         image,
         description,
+        github_link,
+        preview_link,
       },
     });
 
-    console.log("Project created Successfully and added to the db:", project);
+    // console.log("Project created Successfully and added to the db:", project);
     return NextResponse.json(project);
   } catch (error) {
     console.error("Error creating the project and adding it to the db:", error);
@@ -56,7 +59,7 @@ export async function GET(req) {
   try {
     const projects = await db.project.findMany();
 
-    console.log("Projects GET 'method' Successful:", projects);
+    // console.log("Projects GET 'method' Successful:", projects);
     return NextResponse.json(projects);
   } catch (error) {
     console.error("Error fetching projects:", error);

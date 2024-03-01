@@ -1,11 +1,12 @@
-/** @type {import('tailwindcss').Config} */
+import { withUt } from "uploadthing/tw";
 const defaultTheme = require("tailwindcss/defaultTheme");
 
-module.exports = {
+export default withUt({
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/**/*.{ts,tsx,mdx}",
   ],
   theme: {
     extend: {
@@ -13,7 +14,7 @@ module.exports = {
         sans: ["Raleway", ...defaultTheme.fontFamily.sans],
       },
       backgroundColor: {
-        "bgBlack": "hsla(254, 0%, 0%, 1)",
+        bgBlack: "hsla(254, 0%, 0%, 1)",
       },
       backgroundImage: {
         "black-radial":
@@ -29,4 +30,4 @@ module.exports = {
   plugins: [],
 
   darkMode: "class",
-};
+});

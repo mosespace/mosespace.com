@@ -1,19 +1,40 @@
 "use client";
+import { useState } from "react";
 import ImageInput from "./ImageInput";
 import { useForm } from "react-hook-form";
+import { apiRequest } from "@/utils/apiRequest";
+import { useRouter } from "next/navigation";
 
-export default function Create() {
-  const [imageUrl, setImageUrl] = useState("");
+export default function Create({ initialData }) {
+  const [imageUrl, setImageUrl] = useState(initialData?.image);
+  const [loading, setLoading] = useState(false);
 
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
-  } = useForm();
+  } = useForm({
+    defaultValues: initialData ? initialData : "",
+  });
+
+  const router = useRouter();
+  const goBack = () => {
+    router.back();
+  };
 
   async function onSubmit(data) {
+    // console.log(data);
     data.image = imageUrl;
-    console.log(data);
+    const method = initialData ? "PATCH" : "POST";
+
+    const endpoint = initialData
+      ? `api/projects/${initialData.id}`
+      : `api/projects`;
+
+    apiRequest(setLoading, endpoint, data, "Project", reset, method);
+
+    setImageUrl("");
   }
 
   return (
@@ -21,13 +42,13 @@ export default function Create() {
       <section className='bg-white dark:bg-gray-900'>
         <div className='py-8 px-4 mx-auto max-w-2xl lg:py-16'>
           <h2 className='mb-4 text-xl font-bold text-gray-900 dark:text-white'>
-            Add a new project
+            Create a new project
           </h2>
           <form onSubmit={handleSubmit(onSubmit)}>
             <div className='grid gap-4 sm:grid-cols-2 sm:gap-6'>
               <div className='sm:col-span-2'>
                 <label
-                  for='title'
+                  htmlFor='title'
                   className='block mb-2 text-sm font-medium text-gray-900 dark:text-white'
                 >
                   Project Title
@@ -43,7 +64,7 @@ export default function Create() {
               </div>
               <div className='w-full'>
                 <label
-                  for='github_link'
+                  htmlFor='github_link'
                   className='block mb-2 text-sm font-medium text-gray-900 dark:text-white'
                 >
                   Github Link
@@ -59,7 +80,7 @@ export default function Create() {
               </div>
               <div className='w-full'>
                 <label
-                  for='preview_link'
+                  htmlFor='preview_link'
                   className='block mb-2 text-sm font-medium text-gray-900 dark:text-white'
                 >
                   Preview Link
@@ -83,7 +104,7 @@ export default function Create() {
 
               <div className='sm:col-span-2'>
                 <label
-                  for='description'
+                  htmlFor='description'
                   className='block mb-2 text-sm font-medium text-gray-900 dark:text-white'
                 >
                   Description
@@ -97,9 +118,27 @@ export default function Create() {
                 ></textarea>
               </div>
             </div>
-            <button className='inline-flex items-center px-5 py-2.5 mt-4 sm:mt-6 text-sm font-medium text-center text-white bg-green-700 rounded-lg focus:ring-4  hover:bg-green-800'>
-              Add project
-            </button>
+            {loading ? (
+              <button
+                disabled
+                className='inline-flex items-center px-5 py-2.5 mt-4 sm:mt-6 text-sm font-medium text-center text-white bg-amber-700 rounded-lg'
+              >
+                {initialData ? <>Updating...</> : <>Creating...</>}
+              </button>
+            ) : (
+              <div className='flex justify-between'>
+                <button className='inline-flex items-center px-5 py-2.5 mt-4 sm:mt-6 text-sm font-medium text-center text-white bg-green-700 rounded-lg focus:ring-4  hover:bg-green-800'>
+                  {initialData ? <>Update</> : <>Create</>}
+                </button>
+                <button
+                  type='button'
+                  onClick={goBack}
+                  className='inline-flex items-center px-5 py-2.5 mt-4 sm:mt-6 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800'
+                >
+                  Go Back
+                </button>
+              </div>
+            )}
           </form>
         </div>
       </section>
