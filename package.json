@@ -1,13 +1,19 @@
 {
-  "name": "new-folio",
+  "name": "mosespace.com",
   "version": "0.1.0",
   "private": true,
+  "author": {
+    "name": "mosespace",
+    "url": "https://www.mosespace.com"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "postinstall": "prisma generate"
+    "postinstall": "prisma generate",
+    "preview": "next build && next start",
+    "turbo": "next dev --turbo"
   },
   "dependencies": {
     "@emailjs/browser": "^3.11.0",

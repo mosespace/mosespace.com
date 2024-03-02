@@ -30,11 +30,12 @@ export default function Project({ projects }) {
         // Deletion successful, handle any further actions
         toast.success("Project deleted successfully");
         // After deletion, close the modal
-        setShowDeleteConfirmation(false);
         router.refresh();
+        setShowDeleteConfirmation(false);
       } else {
         // Deletion failed, handle errors
         toast.error("Failed to delete project");
+        setShowDeleteConfirmation(false);
       }
     } catch (error) {
       console.error("Error deleting project:", error);
