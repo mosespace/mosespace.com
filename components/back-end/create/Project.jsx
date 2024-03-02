@@ -6,6 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { apiRequest } from "@/utils/apiRequest";
 import { useRouter } from "next/navigation";
+import { toast } from "react-toastify";
 
 export default function Project({ projects }) {
   const [showDeleteConfirmation, setShowDeleteConfirmation] = useState(false);
@@ -31,12 +32,13 @@ export default function Project({ projects }) {
         toast.success("Project deleted successfully");
         // After deletion, close the modal
         router.refresh();
-        setShowDeleteConfirmation(false);
       } else {
         // Deletion failed, handle errors
         toast.error("Failed to delete project");
         setShowDeleteConfirmation(false);
       }
+
+      setShowDeleteConfirmation(false);
     } catch (error) {
       console.error("Error deleting project:", error);
     }
@@ -92,8 +94,8 @@ export default function Project({ projects }) {
         );
       })}
       {showDeleteConfirmation && (
-        <div className='absolute z-50 inset-0 h-screen overflow-hidden w-full place-content-center flex items-center mx-auto bg-white/30 backdrop-blur-md'>
-          <div className=''>
+        <div className='fixed inset-0 flex justify-center items-center bg-white/30 backdrop-blur-md'>
+          <div>
             <DeleteConfirmation
               onConfirm={handleDeleteConfirmed}
               onCancel={handleCancelDelete}
