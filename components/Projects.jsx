@@ -54,6 +54,7 @@ export default async function Projects() {
 
                 <div className='flex gap-4'>
                   <Link
+                    target='_blank'
                     href={project.github_link}
                     className='px-3 py-1 rounded-full border border-gray-100 text-sm font-medium text-primary transition duration-300 lg:hover:border-transparent lg:hover:bg-primary flex gap-2 items-center lg:hover:text-orange-600 dark:border-gray-700 dark:text-gray-300'
                   >
@@ -63,6 +64,7 @@ export default async function Projects() {
                     </span>
                   </Link>
                   <Link
+                    target='_blank'
                     href={project.preview_link}
                     className='px-3 py-1 rounded-full border border-gray-100 text-sm font-medium text-primary transition duration-300 lg:hover:border-transparent lg:hover:bg-primary flex gap-2 items-center lg:hover:text-orange-600 dark:border-gray-700 dark:text-gray-300'
                   >
