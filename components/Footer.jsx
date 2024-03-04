@@ -10,7 +10,9 @@ export default function Footer() {
   if (pathname.startsWith("/admin")) {
     return null;
   }
-
+  if (pathname.startsWith("/sign-in")) {
+    return null;
+  }
   return (
     <footer className='flex flex-wrap items-center justify-between gap-4 border-b pb-4'>
       <h2 className='font-bold text-base'>

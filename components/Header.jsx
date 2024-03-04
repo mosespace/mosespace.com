@@ -9,6 +9,9 @@ export default function Header() {
   if (pathname.startsWith("/admin")) {
     return null;
   }
+  if (pathname.startsWith("/sign-in")) {
+    return null;
+  }
   return (
     <div>
       {/*Desktop Primary Nav Bar */}
