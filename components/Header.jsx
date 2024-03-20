@@ -37,10 +37,11 @@ export default function Header() {
           </Link>
           <div className='flex gap-[1rem] items-center lg:justify-center text-xl'>
             <div className='flex items-center gap-1 rounded-full bg-slate-50 dark:bg-transparent dark:border-[1.5px] py-2 px-4'>
-              <div className='flex justify-center items-center w-[1.2rem] h-[1.2rem] bg-green-200 dark:bg-green-50 animate-pulse rounded-full'>
-                <div className='relative inline-flex w-3 h-3 bg-green-500 dark:bg-green-500 rounded-full'></div>
-              </div>
-              <span className='text-sm'>Online</span>
+              <span class='relative flex h-3 w-3'>
+                <span class='animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75'></span>
+                <span class='relative inline-flex rounded-full h-3 w-3 bg-green-500'></span>
+              </span>
+              <span className='text-sm ml-2'>Online</span>
             </div>
             <ToggleBtn />
           </div>
